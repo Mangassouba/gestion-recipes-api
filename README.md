@@ -141,10 +141,30 @@ Exemple:
 
 Les tests incluent la vérification des fonctionnalités principales telles que la création, la récupération, la mise à jour, et la suppression des recettes.
 
+
+## Analyse et formatege de cose
+
+- Analyse du code: recherche des erreurs dans le code 
+
+      npm run lint
+
+- Formatage de code
+
+      npm run format
+
+## Containerisation avec Docker
+
+- Lien vers l'image DockerHub : [Image Docker](https://hub.docker.com/r/mangassouba15/api-gestion-recipes)
+
+- Telecharger l'image: 
+
+       docker pull mangassouba15/api-gestion-recipes 
+
+- Lancer les conteneurs Docker
+
+      docker-compose up -d
+
+
 ## Auteur
 
 [Hama Houllah Mangassouba](https://github.com/Mangassouba)
-
-Contributeur
-
-[N'Diaye Ousmane Camara](https://github.com/NdiayeOusmanaCamara)

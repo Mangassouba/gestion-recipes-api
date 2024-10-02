@@ -8,12 +8,23 @@ const addRequestValidator = [
     .isEmpty()
     .withMessage("Titre ne peut pas être vide!")
     .bail()
-    .isLength({ min: 6 })
-    .withMessage("Minimum 6 caractères requis!")
-    .bail()
+    .isLength({ min: 5, max: 100 })
+    .withMessage("Le titre doit contenir entre 6 et 100 caractères !")
+    .bail(),
+  check("type")
+    .optional()
+    .not()
+    .isEmpty()
+    .isIn(['entrée', 'plat', 'dessert'])
+    .withMessage("Le type ne peut pas être vide."),
+  check("ingredients")
+    .optional()
+    .isArray({ min: 1 })
+    .withMessage("Les ingrédients doivent être une liste.")
+    .isLength({ min: 10, max: 500 })
     .custom(async (value) => {
       const result = await Recipe.getRecipeByTitle(value);
-      if (result == 0) {
+      if (result) {
         throw new Error("Cette recette existe déjà!");
       }
       return true;
@@ -90,16 +101,18 @@ const updateValidator = [
     }),
   check("titre")
     .optional()
-    .isLength({ min: 6 })
+    .isLength({ min: 5, max: 100 })
     .withMessage("Le titre doit contenir au moins 6 caractères."),
   check("type")
     .optional()
     .not()
     .isEmpty()
+    .isIn(['entrée', 'plat', 'dessert'])
     .withMessage("Le type ne peut pas être vide."),
   check("ingredients")
     .optional()
     .isArray({ min: 1 })
+    .isLength({ min: 10, max: 500 })
     .withMessage("Les ingrédients doivent être une liste."),
   (req, res, next) => {
     const errors = validationResult(req);
