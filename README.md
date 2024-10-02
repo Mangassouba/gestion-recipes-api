@@ -48,6 +48,16 @@ Pour démarrer l'application, exécutez la commande suivante :
  npm start
 ```
 
+## Configuration de la base de donnée
+
+pour se connecter sur la machine local et faire de test  dans le fichier env mettez :
+
+    DB_HOST=localhost
+
+pour se connecter sur docker et faire de test  dans le fichier env mettez 
+
+    DB_HOST=db
+
 ## Endpoints de l'API
 
 ## GET /recipes

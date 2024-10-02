@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "8dce2d2b-20c6-4605-9a8f-3106e176b068",
+		"name": "recetteApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38098580"
+	},
+	"item": [
+		{
+			"name": "GET_RECIPES",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "POST_RECIPES",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH_RECIPES",
+			"request": {
+				"method": "PATCH",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_RECIPES",
+			"request": {
+				"method": "DELETE",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
