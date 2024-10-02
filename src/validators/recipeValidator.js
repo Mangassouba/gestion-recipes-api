@@ -15,7 +15,7 @@ const addRequestValidator = [
     .optional()
     .not()
     .isEmpty()
-    .isIn(['entrée', 'plat', 'dessert'])
+    .isIn(["entrée", "plat", "dessert"])
     .withMessage("Le type ne peut pas être vide."),
   check("ingredients")
     .optional()
@@ -107,7 +107,7 @@ const updateValidator = [
     .optional()
     .not()
     .isEmpty()
-    .isIn(['entrée', 'plat', 'dessert'])
+    .isIn(["entrée", "plat", "dessert"])
     .withMessage("Le type ne peut pas être vide."),
   check("ingredients")
     .optional()

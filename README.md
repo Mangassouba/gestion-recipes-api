@@ -141,10 +141,9 @@ Exemple:
 
 Les tests incluent la vérification des fonctionnalités principales telles que la création, la récupération, la mise à jour, et la suppression des recettes.
 
-
 ## Analyse et formatege de cose
 
-- Analyse du code: recherche des erreurs dans le code 
+- Analyse du code: recherche des erreurs dans le code
 
       npm run lint
 
@@ -156,14 +155,13 @@ Les tests incluent la vérification des fonctionnalités principales telles que 
 
 - Lien vers l'image DockerHub : [Image Docker](https://hub.docker.com/r/mangassouba15/api-gestion-recipes)
 
-- Telecharger l'image: 
+- Telecharger l'image:
 
-       docker pull mangassouba15/api-gestion-recipes 
+       docker pull mangassouba15/api-gestion-recipes
 
 - Lancer les conteneurs Docker
 
       docker-compose up -d
-
 
 ## Auteur
 
