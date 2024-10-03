@@ -50,11 +50,13 @@ Pour démarrer l'application, exécutez la commande suivante :
 
 ## Configuration de la base de donnée
 
-pour se connecter sur la machine local et faire de test  dans le fichier env mettez :
+dans le projet le fichier .env.example faut le renommé en .env et ajouter vos identifiant pour pouvoir se conncter à la base de donnée
+
+pour se connecter sur la machine local et faire de test  dans le fichier .env mettez :
 
     DB_HOST=localhost
 
-pour se connecter sur docker et faire de test  dans le fichier env mettez 
+pour se connecter sur docker et faire de test  dans le fichier .env mettez 
 
     DB_HOST=db
 
@@ -151,7 +153,7 @@ Exemple:
 
 Les tests incluent la vérification des fonctionnalités principales telles que la création, la récupération, la mise à jour, et la suppression des recettes.
 
-## Analyse et formatege de cose
+## Recherche des erreurs et formatage de code
 
 - Analyse du code: recherche des erreurs dans le code
 
@@ -163,11 +165,19 @@ Les tests incluent la vérification des fonctionnalités principales telles que 
 
 ## Containerisation avec Docker
 
-- Lien vers l'image DockerHub : [Image Docker](https://hub.docker.com/r/mangassouba15/api-gestion-recipes)
+- Construction de l'image
+
+      docker build -t api-gestion-recipes .
+
+ - Lien vers l'image DockerHub : [Image Docker](https://hub.docker.com/r/mangassouba15/api-gestion-recipes)
 
 - Telecharger l'image:
 
        docker pull mangassouba15/api-gestion-recipes
+
+- Lancer les contenaires
+
+      docker-compose up --build
 
 - Lancer les conteneurs Docker
 
