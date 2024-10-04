@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "8dce2d2b-20c6-4605-9a8f-3106e176b068",
+		"_postman_id": "b64d4ac2-5956-401c-a31c-55aa8677a144",
 		"name": "recetteApi",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "38098580"
@@ -10,7 +10,18 @@
 			"name": "GET_RECIPES",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3070/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3070",
+					"path": [
+						"recipes"
+					]
+				}
 			},
 			"response": []
 		},
@@ -18,15 +29,56 @@
 			"name": "POST_RECIPES",
 			"request": {
 				"method": "POST",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Soupe à l'oignons\",\r\n    \"type\": \"entrée\",\r\n    \"ingredient\": \"Oignons, Bouillon de bœuf, Gruyère, Croûtons\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3070/recipes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3070",
+					"path": [
+						"recipes"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "PATCH_RECIPES",
+			"name": "PUT_RECIPES",
 			"request": {
-				"method": "PATCH",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Soupe à l'oignons\",\r\n    \"type\": \"entrée\",\r\n    \"ingredient\": \"Oignons, Bouillon de bœuf, Gruyère, Croûtons\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3070/recipes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3070",
+					"path": [
+						"recipes",
+						"3"
+					]
+				}
 			},
 			"response": []
 		},
@@ -34,7 +86,28 @@
 			"name": "DELETE_RECIPES",
 			"request": {
 				"method": "DELETE",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"Soupe à l'oignons\",\r\n    \"type\": \"entrée\",\r\n    \"ingredient\": \"Oignons, Bouillon de bœuf, Gruyère, Croûtons\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3070/recipes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3070",
+					"path": [
+						"recipes",
+						"3"
+					]
+				}
 			},
 			"response": []
 		}
